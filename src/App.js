@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import Main from './components/Main'
+import Naming from './components/Naming';
 import Game from './components/Game'
 
 function App() {
@@ -7,11 +8,13 @@ function App() {
 
   useEffect(() => setFrame('main'), []);
 
+  const namepet = () => setFrame('namepet')
   const game = () => setFrame('game');
 
   return (
     <div className="App">
-      {frame === 'main' && <Main next={game} />}
+      {frame === 'main' && <Main next={namepet} />}
+      {frame === 'naming' && <Naming next={game}/>}
       {frame === 'game' && <Game />}
     </div>
   );
