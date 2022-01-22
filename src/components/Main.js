@@ -1,11 +1,12 @@
 import React from 'react';
+import './Main.scss'
 
 export default function Main({next}) {
   return (
-  <div className='user_name'>
+  <div className='user-name'>
     <h1>Enter Your Name</h1>
-    <input className='input' name='setUsername' id='setUsername' placeholder='UserName' autoComplete='off'/>
-    <button className="submit_button" onClick={next}>Submit</button>
+    <input className='user-name__input' name='setUsername' id='setUsername' placeholder='UserName' autoComplete='off'/>
+    <button className="user-name__start-button" onClick={next}>Start</button>
   </div>
   );
 }
