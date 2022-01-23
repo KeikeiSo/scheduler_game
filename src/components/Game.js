@@ -1,22 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Game.scss'
 import normal from '../assets/cat_normal.png'
-import standing from '../assets/cat_standing.png'
-
-const imgs = {
-  true: normal,
-  false: standing
-}
 
 export default function Game() {
-  const [toggle, setToggle] = useState(true);
+  const pet_name = document.getElementById('setPetname').value;
   const [submit, setSubmit] = useState(false);
 
   var t1, t2, t3;
 
   const changeImg = () => {
-    toggle ? setToggle(false) : setToggle(true)
+    document.getElementById('p_name').style.visibility = "visible";
+    setTimeout(setInvisible, 5000);
   }
+
 
   const attemptSubmit = () => {
     setSubmit(true);
@@ -25,9 +21,10 @@ export default function Game() {
     t3 = document.getElementById("task3").textContent;
   }
   return (
-  <section className='game'>
+   <section className='game'>
     <div className='game__imgs'>
-      <img className='game__catimg' src={imgs[toggle]} alt='cat' onClick={changeImg}/>
+        <h1 className='game__pet_name' id='p_name'>{pet_name}</h1>;
+        <img className='game__catimg' src={normal} alt='cat' onClick={changeImg} />
     </div>
     <div className='game__panel'>
       {!submit && <h1 className='game__question'>What do u want to feed me today?</h1>}
@@ -44,4 +41,8 @@ export default function Game() {
     </div>
   </section>
   );
+}
+
+function setInvisible() {
+  document.getElementById('p_name').style.visibility = "hidden";
 }
