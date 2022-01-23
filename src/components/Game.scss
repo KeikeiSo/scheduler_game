@@ -1,0 +1,20 @@
+.game {
+    background-image: url(../../public/assets/room.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+    &__catimg {
+        width: 25%;
+        height: 35%;
+        position: absolute;
+        left: 15%;
+        bottom: 0%;
+    }
+}
