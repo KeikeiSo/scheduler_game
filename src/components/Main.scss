@@ -12,23 +12,27 @@
   justify-content: space-between;
 
   &__text {
-    margin-top: 0rem;
-    margin-bottom: 1rem;
+    // margin-top: 0rem;
+    // margin-bottom: 1rem;
+    position: absolute;
+    top:30px;
+    left: 40px;
+
     padding: 0.5rem;
-    font-size: 6rem;
+    font-size: 5rem;
     color: #ffff
   }
 
   &__input {
-      width: 40rem;
-      margin: 0.5rem 0;
+      width: 35rem;
+      //margin: 0.5rem 0;
       padding: 0.5rem;
       border-radius: 0.5rem;
       border: 2px solid rgb(29, 17, 3);
       background-color: rgb(255, 255, 255, 0.5);
       outline: none;
       transition: 0.2s box-shadow, 0.2s background-color;
-      font-size: 6rem;
+      font-size: 5rem;
 
       // &:hover {
       //     background-color: rgb(255, 255, 255, 0.75);
@@ -36,11 +40,15 @@
       &:focus {
           background-color: white;
       }
+
+      position: absolute;
+      top:230px;
+      left: 40px;
   }
   &__start-button {
-      margin-top: 4rem;
-      margin-left: auto;
-      width: 35%;
+      // margin-top: 4rem;
+      // margin-left: auto;
+      width: 25%;
       padding: 0.5rem;
       border-radius: 1rem;
       font-size: 5rem;
@@ -55,5 +63,9 @@
           background-color: rgb(235, 202, 15);
           outline: none;
       }
+
+      position: absolute;
+      top:400px;
+      left: 140px;
   }
 }
