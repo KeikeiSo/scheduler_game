@@ -17,4 +17,78 @@
         left: 15%;
         bottom: 0%;
     }
+
+    &__panel {
+        background-color: rgb(26, 25, 25);
+        border-radius: 1rem;
+        width: 30rem;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        &:first-child {
+            padding-right: 2rem;
+            border-right: 2px solid rgba(65, 40, 12, 0.15);
+        }
+        &:last-child {
+            padding-left: 2rem;
+        }
+    }
+    &__question {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.75rem;
+    }
+    &__checkbox {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.75rem;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: calc(100% - 3.25rem);
+    margin: 1rem 1rem;
+
+    &__input {
+        width: 16rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        color: #fff;
+        border: 2px rgb(233, 203, 169);
+        background-color: rgba(26, 25, 25, 0.774);
+        outline: none;
+        transition: 0.2s box-shadow, 0.2s background-color;
+        font-size: 1rem;
+
+        &:focus {
+            background-color: rgba(80, 77, 77, 0.603);
+        }
+        &::placeholder {
+            color:#fff;
+        }
+    }
+
+    &__button {
+        margin-top: 1rem;
+        margin-left: 0px;
+        width: 25%;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+        border: 2px solid rgb(241, 133, 8);
+        background-color: rgb(252, 170, 77);
+        color: white;
+        cursor: pointer;
+        transition: 0.2s background-color;
+
+        &:hover, &:focus {
+            background-color: rgb(241, 133, 8);
+            outline: none;
+        }
+    }
 }
