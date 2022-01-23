@@ -1,24 +1,27 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Game.scss'
 import normal from '../assets/cat_normal.png'
-import standing from '../assets/cat_standing.png'
-
-const imgs = {
-  true: normal,
-  false: standing
-}
 
 export default function Game() {
-  const [toggle, setToggle] = useState(true);
+
+  const pet_name = document.getElementById('setPetname').value;
+
 
   const changeImg = () => {
-    toggle ? setToggle(false) : setToggle(true)
+    document.getElementById('p_name').style.visibility = "visible";
+    setTimeout(setInvisible, 5000);
   }
+
   return (
-  <section className='game'>
-    <div>
-      <img className='game__catimg' src={imgs[toggle]} alt='cat' onClick={changeImg}/>
-    </div>
-  </section>
+    <section className='game'>
+      <div>
+        <h1 className='game__pet_name' id='p_name'>{pet_name}</h1>;
+        <img className='game__catimg' src={normal} alt='cat' onClick={changeImg} />
+      </div>
+    </section>
   );
+}
+
+function setInvisible() {
+  document.getElementById('p_name').style.visibility = "hidden";
 }
