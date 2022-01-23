@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => setFrame('main'), []);
 
-  const namepet = () => setFrame('namepet')
+  const namepet = () => setFrame('naming')
   const game = () => setFrame('game');
 
   return (
