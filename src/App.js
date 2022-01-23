@@ -8,9 +8,16 @@ function App() {
 
   useEffect(() => setFrame('main'), []);
 
-  const namepet = () => setFrame('naming')
-  const game = () => setFrame('game');
-
+  const namepet = () => {
+    setFrame('naming');
+    const val = document.querySelector('input');
+    localStorage.setItem('userName', val.value);
+  }
+  const game = () => {
+    setFrame('game');
+    const val = document.querySelector('input');
+    localStorage.setItem('petName', val.value);
+  }
   return (
     <div className="App">
       {frame === 'main' && <Main next={namepet} />}

@@ -18,6 +18,14 @@
         bottom: 0%;
     }
 
+    &__loveimg {
+        width: 25%;
+        height: 35%;
+        position: absolute;
+        left: 5%;
+        bottom: 30%;
+    }
+
     &__pet_name {
         visibility: hidden;
         position: absolute;
@@ -26,7 +34,7 @@
         padding: 0.5rem;
         font-size: 2rem;
         color: rgb(0, 0, 0);
-  }
+    }
   
     &__panel {
         background-color: rgb(26, 25, 25);
@@ -43,15 +51,29 @@
             padding-left: 2rem;
         }
     }
+
     &__question {
         color: #fff;
         font-weight: 500;
         font-size: 1.75rem;
     }
+    &__checklist {
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        vertical-align: middle;
+    }
     &__checkbox {
         color: #fff;
+        width: 16rem;
         font-weight: 500;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        display: inline-block;
+        text-align: left;
+        margin: 0.5rem 0.5rem;
+        padding: 0.5rem;
+        justify-content: space-between;
     }
 }
 
